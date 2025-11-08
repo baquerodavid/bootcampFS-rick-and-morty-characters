@@ -30,6 +30,9 @@ fetch(urlEndpoint + currentPage)
       speciesCharacter.innerHTML = `<span>Species:</span> ${data.results[i].species}`;
       //console.log(data.results[i])
     }
+  })
+  .catch((error) => {
+    list.innerHTML = `<li>Hubo un error y no se pudo obtener la información de Rick and Morty</li>`;
   });
 
 //console.log(urlEndpoint + currentPage)
@@ -64,8 +67,11 @@ nextPageBtn.addEventListener('click', () => {
         speciesCharacter.innerHTML = `<p><span>Species:</span> ${data.results[i].species}</p>`;
         //console.log(data.results[i])
       }
-    });
+    })
   //console.log('Adelante: ' + urlEndpoint + currentPage);
+    .catch((error) => {
+      list.innerHTML = `<li>Hubo un error y no se pudo obtener la información de Rick and Morty</li>`;
+    });
 });
 
 prevPageBtn.addEventListener('click', () => {
@@ -98,7 +104,10 @@ prevPageBtn.addEventListener('click', () => {
           speciesCharacter.innerHTML = `<p><span>Species:</span> ${data.results[i].species}</p>`;
           //console.log(data.results[i])
         }
-      });
+      })
     //console.log('Atrás: ' + urlEndpoint + currentPage);
+      .catch((error) => {
+        list.innerHTML = `<li>Hubo un error y no se pudo obtener la información de Rick and Morty</li>`;
+      });
   }
 });
