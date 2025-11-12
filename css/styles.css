@@ -115,3 +115,10 @@ p span {
   color: #fff;
   font-weight: 500;
 }
+
+/* 👇 CODIGO DE LA LIVE REVIEW EMPIEZA DESDE AQUÍ 👇 */
+
+/* Esta clase disabled es para los botones que se crea con la función en el script.js y que hacen desaparecer los botones cuando llega a la página mínima y máxima */
+.disabled {
+  visibility: hidden;
+}
